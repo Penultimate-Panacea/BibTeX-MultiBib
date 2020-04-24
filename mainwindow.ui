@@ -48,7 +48,7 @@
       <string>## Deduplicate Single File</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QProgressBar" name="dedupLoadingProgressBar">
@@ -77,7 +77,7 @@
       <string>### Loading</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QLabel" name="dedupSortLabel">
@@ -93,7 +93,7 @@
       <string>### Sorting</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QPushButton" name="dedupButton">
@@ -135,7 +135,7 @@
       <string>### Deduplicating</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QCheckBox" name="checkBox">
@@ -146,6 +146,9 @@
        <width>121</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Instead of removing duplicates, MultiBiB will comment out duplicate files</string>
      </property>
      <property name="statusTip">
       <string>statusTip</string>
@@ -216,7 +219,7 @@
      <string># MultiBiB</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::MarkdownText</enum>
+     <enum>Qt::PlainText</enum>
     </property>
    </widget>
    <widget class="QFrame" name="mergeFilesFrame">
@@ -247,7 +250,7 @@
       <string>## Merge Files</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QProgressBar" name="mergeLoadingProgressBar">
@@ -260,7 +263,7 @@
       </rect>
      </property>
      <property name="value">
-      <number>24</number>
+      <number>100</number>
      </property>
     </widget>
     <widget class="QLabel" name="mergeFileLoadingLabel">
@@ -276,7 +279,7 @@
       <string>### Loading</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QLabel" name="mergeSortingLable">
@@ -292,7 +295,7 @@
       <string>### Sorting</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QPushButton" name="mergeButton">
@@ -334,7 +337,7 @@
       <string>### Deduplicating</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QCheckBox" name="mergePreserveCheckBox">
@@ -345,6 +348,9 @@
        <width>117</width>
        <height>17</height>
       </rect>
+     </property>
+     <property name="toolTip">
+      <string>Instead of removing duplicates, MultiBiB will comment out duplicate files</string>
      </property>
      <property name="statusTip">
       <string>statusTip</string>
@@ -436,7 +442,7 @@
       <string>### Merging</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::MarkdownText</enum>
+      <enum>Qt::PlainText</enum>
      </property>
     </widget>
     <widget class="QPushButton" name="firstFileButton">
@@ -479,7 +485,10 @@
      <string>## By: Rian Fantozzi</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::MarkdownText</enum>
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="liscenseLabel">
@@ -495,7 +504,7 @@
      <string>### AGPL 3.0</string>
     </property>
     <property name="textFormat">
-     <enum>Qt::MarkdownText</enum>
+     <enum>Qt::PlainText</enum>
     </property>
    </widget>
   </widget>
