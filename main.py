@@ -13,7 +13,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         Ui_MainWindow.__init__(self)
         self.setWindowIcon(QtGui.QIcon('icon.png'))
         self.setWindowTitle('MultiBib')
-        self.setFixedSize(1200, 600)
+        self.setFixedSize(680, 490)
         self.setupUi(self)
 
 
