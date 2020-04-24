@@ -6,8 +6,9 @@ from sys import exit, argv
 
 myappid = 'fantozzi.multibib.1.0'
 windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
-qtcreator_file  = "mainwindow.ui"
+qtcreator_file = "mainwindow.ui"
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtcreator_file)
+
 
 class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -23,15 +24,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def import_bibfile(self):
         filename = QtWidgets.QFileDialog.getOpenFileName(self, filter="BibTeX (*.bib)")
-        self.load_bibfile(filename)
-        return
-
-    def load_bibfile(self, filename):
-        with open(filename[0]) as bibtex_file:
+        with open(str(filename), encoding='utf8') as bibtex_file:
             bib_database = bibtexparser.load(bibtex_file)
-        print(bib_database.entries)
-        return
-
+        return bib_database
 
 
 if __name__ == "__main__":
@@ -39,4 +34,3 @@ if __name__ == "__main__":
     window = MyWindow()
     window.show()
     exit(app.exec_())
-
