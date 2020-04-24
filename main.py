@@ -1,3 +1,5 @@
+import bibtexparser
+from tqdm import tqdm
 from ctypes import windll
 from PyQt5 import QtGui, QtWidgets, uic
 from sys import exit, argv
@@ -15,6 +17,21 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle('MultiBib')
         self.setFixedSize(680, 490)
         self.setupUi(self)
+        self.dedupFileButton.clicked.connect(self.import_bibfile)
+        self.firstFileButton.clicked.connect(self.import_bibfile)
+        self.secondFileButton.clicked.connect(self.import_bibfile)
+
+    def import_bibfile(self):
+        filename = QtWidgets.QFileDialog.getOpenFileName(self, filter="BibTeX (*.bib)")
+        self.load_bibfile(filename)
+        return
+
+    def load_bibfile(self, filename):
+        with open(filename[0]) as bibtex_file:
+            bib_database = bibtexparser.load(bibtex_file)
+        print(bib_database.entries)
+        return
+
 
 
 if __name__ == "__main__":
