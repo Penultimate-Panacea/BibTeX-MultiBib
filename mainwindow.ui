@@ -108,6 +108,9 @@
      <property name="text">
       <string>Deduplicate!</string>
      </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
     </widget>
     <widget class="QProgressBar" name="dedupSortProgressBar">
      <property name="geometry">
@@ -138,7 +141,7 @@
       <enum>Qt::PlainText</enum>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="dedupPreserveCheckBox">
      <property name="geometry">
       <rect>
        <x>160</x>
@@ -151,7 +154,7 @@
       <string>Instead of removing duplicates, MultiBiB will comment out duplicate files</string>
      </property>
      <property name="statusTip">
-      <string>statusTip</string>
+      <string/>
      </property>
      <property name="whatsThis">
       <string>whatsThis</string>
@@ -310,6 +313,15 @@
      <property name="text">
       <string>Merge!</string>
      </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="default">
+      <bool>false</bool>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
     </widget>
     <widget class="QProgressBar" name="mergeSortingProgressBar">
      <property name="geometry">
@@ -353,7 +365,7 @@
       <string>Instead of removing duplicates, MultiBiB will comment out duplicate files</string>
      </property>
      <property name="statusTip">
-      <string>statusTip</string>
+      <string/>
      </property>
      <property name="whatsThis">
       <string>whatsThis</string>
@@ -404,7 +416,7 @@
       </rect>
      </property>
      <property name="statusTip">
-      <string>statusTip</string>
+      <string/>
      </property>
      <property name="whatsThis">
       <string>whatsThis</string>
