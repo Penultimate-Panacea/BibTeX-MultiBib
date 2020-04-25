@@ -24,7 +24,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.dedupDB = None
         self.firstDB = None
         self.secondDB = None
-        return
+        returnf
 
     def import_bibfile_d(self):
         filename = QtWidgets.QFileDialog.getOpenFileName(self, filter="BibTeX (*.bib)")
