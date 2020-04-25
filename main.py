@@ -45,9 +45,9 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             with open(filename[0], encoding='utf8') as bibtex_file:
                 print(bibtex_file)
-        print("It Worked")
+        print("It Worked!")
         self.firstDB = bib_database
-        print("It Imported")
+        print("It Imported!")
         return
 
     def import_bibfile_s(self):
