@@ -48,7 +48,7 @@
       <string>## Deduplicate Single File</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::PlainText</enum>
+      <enum>Qt::AutoText</enum>
      </property>
     </widget>
     <widget class="QProgressBar" name="dedupLoadingProgressBar">
@@ -97,6 +97,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="dedupButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -183,6 +186,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="dedupSaveButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>90</x>
@@ -302,6 +308,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="mergeButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -394,6 +403,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="mergeSaveButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -407,6 +419,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="mergeDeduplicatorButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>90</x>

@@ -18,16 +18,24 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setWindowTitle('MultiBib')
         self.setFixedSize(680, 490)
         self.setupUi(self)
-        self.dedupFileButton.clicked.connect(self.import_bibfile)
-        self.firstFileButton.clicked.connect(self.import_bibfile)
-        self.secondFileButton.clicked.connect(self.import_bibfile)
+        self.dedupFileButton.clicked.connect(self.import_bibfile('d'))
+    #    self.firstFileButton.clicked.connect(self.import_bibfile('1'))
+    #    self.secondFileButton.clicked.connect(self.import_bibfile('2'))
+        self.dedupDB = None
+        self.firstDB = None
+        self.secondDB = None
 
     def import_bibfile(self):
         filename = QtWidgets.QFileDialog.getOpenFileName(self, filter="BibTeX (*.bib)")
         with open(str(filename), encoding='utf8') as bibtex_file:
             bib_database = bibtexparser.load(bibtex_file)
-        return bib_database
-
+        if dictcode == 'd':
+            self.dedupDB = bib_database
+        elif dictcode == '1':
+            self.firstDB = bib_database
+        elif dictcode == '2':
+            self.secondDB = bib_database
+        return
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(argv)
